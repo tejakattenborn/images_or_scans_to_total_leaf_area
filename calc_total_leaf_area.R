@@ -42,8 +42,8 @@ for(i in 1:length(files)){
   report_table[i,3]=report_result[[3]]
 }
 
-colnames(report_table) = c("species", "leaf area [cm2]", "non leaf area [cm2]")
+colnames(report_table) = c("ID", "leaf area [cm2]", "non leaf area [cm2]")
 report_table
-write.table(report_table, "output/leaf_area_total.csv", sep=",", dec=".")
+write.table(report_table, "output/leaf_area_total.csv", sep=";", dec=".", row.names = F)
 
 
